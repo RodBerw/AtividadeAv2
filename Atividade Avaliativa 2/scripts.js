@@ -50,6 +50,25 @@ function atividade4(){
         }
     }
     else{
-        document.getElementById("resultado").innerHTML = `O valor absoluto do número ${n} é ${-n}`;
+        document.getElementById("resultado").innerHTML = `O valor absoluto do número ${n} é ${Math.abs(n)}`;
     }
+}
+
+function atividade5(){
+    var n = Number(window.prompt("Digite um valor inteiro: "));
+
+    if(n % 2 == 0){
+        if(n % 3 == 0){
+            document.getElementById("resultado").innerHTML = `O número ${n} é divisível por 2 e 3.`;
+        }
+        else{
+            document.getElementById("resultado").innerHTML = `O número ${n} é divisível somente por 2.`;
+        }
+    }
+    else{
+        if(n % 3 == 0){
+            document.getElementById("resultado").innerHTML = `O número ${n} é divisível somente por 3.`;
+        }
+    }
+
 }
