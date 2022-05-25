@@ -70,5 +70,94 @@ function atividade5(){
             document.getElementById("resultado").innerHTML = `O número ${n} é divisível somente por 3.`;
         }
     }
+}
 
+function atividade6(){
+    var n = Number(window.prompt("Digite um valor inteiro: "));
+
+    if(n % 2 == 0){
+        document.getElementById("resultado").innerHTML = `O número ${n} é divisível por 2.`;
+    }
+    else if(n % 7 == 0){
+        document.getElementById("resultado").innerHTML = `O número ${n} é divisível por 7.`;
+    }
+}
+
+function atividade7(){
+
+    var nd = Number(window.prompt("Informe um número entre 1 e 7: "));
+    var resultado;
+
+    if(nd >= 1 && nd <=7){
+        switch(nd){
+            case 1:
+                resultado = "Domingo";
+                break;
+            case 2:
+                resultado = "Segunda";
+                break;
+            case 3:
+                resultado = "Terça";
+                break;
+            case 4:
+                resultado = "Quarta";
+                break;
+            case 5:
+                resultado = "Quinta";
+                break;
+            case 6:
+                resultado = "Sexta";
+                break; 
+            case 7:
+                resultado = "Sábado";
+                break;           
+        }
+    }
+
+    document.getElementById("resultado").innerHTML = resultado;
+}
+
+function atividade8(){
+
+    var soma = 0;
+
+    for(var i = 1; i <= 20; i++){
+        if(i % 2 == 0){
+            soma += i;
+        }
+    }
+
+    document.getElementById("resultado").innerHTML = "A soma dos valores pares entre 1 e 20 é: " + soma;
+
+}
+
+function atividade9(){
+
+    var n = Number(window.prompt("Informe um número: "));
+
+    document.getElementById("resultado").innerHTML = `
+        ${n} x 1 = ${n*1},
+        ${n} x 2 = ${n*2},
+        ${n} x 3 = ${n*3},
+        ${n} x 4 = ${n*4},
+        ${n} x 5 = ${n*5},
+        ${n} x 6 = ${n*6},
+        ${n} x 7 = ${n*7},
+        ${n} x 8 = ${n*8},
+        ${n} x 9 = ${n*9},
+        ${n} x 10 = ${n*10}.
+    `;
+
+}
+
+function atividade10(){
+
+    var n = Number(window.prompt("Informe um número: "));
+    var resultado = n;
+
+    for(var i=n; i>1; i--){
+        resultado *= i-1;
+    }
+
+    document.getElementById("resultado").innerHTML = `O resultado fatorial do número ${n} é: ${resultado}.`;
 }
